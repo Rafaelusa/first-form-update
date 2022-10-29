@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Formulario</title>
 </head>
-<body>
-    <h1>Acesse a sua conta</h1>
-    <h2>Insira Login e Senha.</h2>
-    <form action="">
+    <h1>Seja bem-vindo!</h1>
+    <h2>Insira E-mail e Senha.</h2>
+    <form action="" method="post" name="formulario">
         <ul>
             <li>
-                <label for="nome">Nome de Usuário:</label>
-                <input type="text" id="nome" name="nomeUsuario" value="usuário">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Ex:usuario@servidor.com" name="emailUsuario" 
+                pattern="[a-z0-9._]+@[a-z0-9._]+\.[a-z]{2,}$" required 
+                title="Informe o email que você usou no cadastro.">
             </li>
             <li>
                 <label for="senha">Senha: </label>
-                <input type="password" id="senha" name="senhaDoUsuario" value="senha">
+                <input type="password" placeholder="Informe uma senha de 6 digitos." name="senhaDoUsuario" 
+                minlength="6" required 
+                title="A senha precisa conter 6 caracteres.">
             </li>
         </ul>
-        <input type="submit" value="Logar">
+        <button type="submit">Entrar</button>
     </form>
 </body>
 </html>
